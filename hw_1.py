@@ -76,7 +76,6 @@ def count_find_num(primes_l, limit):
     for num in primes_l:
         for total in all_values:
             value = num * total
-            while value <= limit and value not in all_values:
+            if value <= limit and value not in all_values:
                 all_values.append(value)
     return [len(all_values), max(all_values)]
-
