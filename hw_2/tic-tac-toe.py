@@ -95,6 +95,7 @@ def get_result():
     return False
 
 
+# Предлагаем сделать ход игроку
 def step_from_person():
     global step
     variants_to_step = [i for i in maps if str(i) not in 'X0']
