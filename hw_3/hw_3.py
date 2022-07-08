@@ -72,8 +72,3 @@ def try_repeat(call_count, start_sleep_time, factor, border_sleep_time):
         return wrapper
 
     return inner
-
-
-@try_repeat(call_count=10, start_sleep_time=1, factor=1, border_sleep_time=20)
-def test_func():
-    pass

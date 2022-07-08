@@ -22,9 +22,6 @@ class CyclicIterator:
             return next(self.iter)
 
 
-cyclic_iterator = CyclicIterator(range(3))
-for i in cyclic_iterator:
-    print(i)
 
 """
 2. Задача на разжатие массива. Секция статьи "2. Задача на разжатие массива."
@@ -54,5 +51,6 @@ m = Movie('sw', [
     (datetime(2020, 1, 15), datetime(2020, 2, 7))
 ])
 
-for d in m.schedule():
-    print(d)
+if __name__ == '__main__':
+    for d in m.schedule():
+        print(d)
