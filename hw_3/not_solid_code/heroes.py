@@ -37,9 +37,5 @@ class Superman(UltimateAttackMixin, SuperHero):
     def __init__(self):
         super(Superman, self).__init__('Clark Kent', True)
 
-    def attack(self):
-        super().attack()
-        return 'Kick'
-
     def ultimate(self):
         self.incinerate_with_lasers()
