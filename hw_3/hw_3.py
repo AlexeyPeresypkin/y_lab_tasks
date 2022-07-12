@@ -81,8 +81,8 @@ def test_func():
 
 
 if __name__ == '__main__':
-    multiplier(7)
-    multiplier(7)
-    multiplier(9)
+    print(multiplier(7))
+    print(multiplier(7))
+    print(multiplier(9))
 
     test_func()
