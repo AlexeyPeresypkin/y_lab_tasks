@@ -4,6 +4,7 @@
 Итератор должен итерироваться по итерируемому объекту (list, tuple, set, range, Range2, и т. д.),
 и когда достигнет последнего элемента, начинать сначала.
 """
+import time
 
 
 class CyclicIterator:
@@ -20,7 +21,6 @@ class CyclicIterator:
         except StopIteration:
             self.iter = iter(self.obj)
             return next(self.iter)
-
 
 
 """
@@ -42,8 +42,8 @@ class Movie:
 
     def schedule(self) -> Generator[datetime, None, None]:
         for date_1, date_2 in self.dates:
-            for i in range((date_2 - date_1).days + 1):
-                yield date_1 + timedelta(i)
+            for day in range((date_2 - date_1).days + 1):
+                yield date_1 + timedelta(day)
 
 
 m = Movie('sw', [
@@ -54,3 +54,9 @@ m = Movie('sw', [
 if __name__ == '__main__':
     for d in m.schedule():
         print(d)
+
+    time.sleep(3)
+
+    cyclic_iterator = CyclicIterator(range(3))
+    for i in cyclic_iterator:
+        print(i)
